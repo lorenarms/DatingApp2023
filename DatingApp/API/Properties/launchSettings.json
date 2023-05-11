@@ -1,6 +1,7 @@
 {
   "profiles": {
     "api": {
+      "hotReloadEnabled": false,
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",
