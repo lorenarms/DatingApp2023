@@ -51,6 +51,17 @@ namespace API.Controllers
 			
 		}
 
+		[HttpGet("id/")]
+		public async Task<ActionResult> GetUser([FromQuery]int id)
+		{
+			var user = await _userRepository.GetUserByIdAsync(id);
+			return Ok(user);
+			
+		}
+
+
+
+		
 		[HttpPut]
 		public async Task<ActionResult> UpdateUser(MemberUpdateDTO memberUpdateDto){
 			
