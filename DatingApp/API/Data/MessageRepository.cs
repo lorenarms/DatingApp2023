@@ -87,17 +87,13 @@ namespace API.Data
                     message.DateRead = DateTime.UtcNow;
                 }
 
-                await _context.SaveChangesAsync();
+                
 
             }
 
             return _mapper.Map<IEnumerable<MessageDTO>>(messages);
         }
 
-        public async Task<bool> SaveAllAsync()
-        {
-            return await _context.SaveChangesAsync() > 0;
-        }
 
         public void AddGroup(Group group)
         {
