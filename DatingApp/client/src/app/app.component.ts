@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AccountService } from './_services/account.service';
 import { User } from './_models/user';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,7 @@ import { User } from './_models/user';
 })
 export class AppComponent implements OnInit {
 
-  getUsersUrl = 'https://localhost:5001/api/users';
+  getUsersUrl = environment.apiUrl + 'users';
 
   title = 'Dating App';
 
